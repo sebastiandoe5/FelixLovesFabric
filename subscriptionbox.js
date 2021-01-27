@@ -14,7 +14,7 @@ function linkify(inputText) {
 }
 
 $(document).ready(function() {
-    const URL = `https://cors-anywhere.herokuapp.com/https://openapi.etsy.com/v2/listings/896057335?api_key=buepssvdyz0dclpg4nnn7caf`;
+    const URL = `https://crossrun.herokuapp.com/https://openapi.etsy.com/v2/listings/896057335?api_key=buepssvdyz0dclpg4nnn7caf`;
     var jqxhr = $.get(URL, function() {})
         .done(function() {
             var description = jqxhr.responseJSON.results[0].description;

@@ -14,7 +14,7 @@ function linkify(inputText) {
 }
 
 $(document).ready(function() {
-    const URL = `https://cors-anywhere.herokuapp.com/https://openapi.etsy.com/v2/listings/896057335?api_key=buepssvdyz0dclpg4nnn7caf`;
+    const URL = `https://crossrun.herokuapp.com/https://openapi.etsy.com/v2/listings/896057335?api_key=buepssvdyz0dclpg4nnn7caf`;
     var jqxhr = $.get(URL, function() {})
         .done(function() {
             $('.price').text('Starting at £' + jqxhr.responseJSON.results[0].price);
@@ -22,7 +22,7 @@ $(document).ready(function() {
         .fail(function() {
             console.log("Fetch Error");
         })
-    const shopURL = `https://cors-anywhere.herokuapp.com/https://openapi.etsy.com/v2/shops/FelixLovesFabric?api_key=buepssvdyz0dclpg4nnn7caf`;
+    const shopURL = `https://crossrun.herokuapp.com/https://openapi.etsy.com/v2/shops/FelixLovesFabric?api_key=buepssvdyz0dclpg4nnn7caf`;
     var shopResults = $.get(shopURL, function() {})
         .done(function() {
             var shipping = shopResults.responseJSON.results[0].policy_shipping;
@@ -59,7 +59,7 @@ $(document).ready(function() {
         .fail(function() {
             console.log("Fetch Error");
         })
-    const categoryURL = `https://cors-anywhere.herokuapp.com/https://openapi.etsy.com/v2/shops/FelixLovesFabric/sections?api_key=buepssvdyz0dclpg4nnn7caf`;
+    const categoryURL = `https://crossrun.herokuapp.com/https://openapi.etsy.com/v2/shops/FelixLovesFabric/sections?api_key=buepssvdyz0dclpg4nnn7caf`;
     var categoryResults = $.get(categoryURL, function() {})
         .done(function() {
             var categories = categoryResults.responseJSON.results;
@@ -70,7 +70,7 @@ $(document).ready(function() {
         .fail(function() {
             console.log("Fetch Error");
         })
-    const shopAboutURL = `https://cors-anywhere.herokuapp.com/https://openapi.etsy.com/v2/shops/FelixLovesFabric/about?api_key=buepssvdyz0dclpg4nnn7caf`;
+    const shopAboutURL = `https://crossrun.herokuapp.com/https://openapi.etsy.com/v2/shops/FelixLovesFabric/about?api_key=buepssvdyz0dclpg4nnn7caf`;
     var shopAboutResults = $.get(shopAboutURL, function() {})
         .done(function() {
             var shopAbout = shopAboutResults.responseJSON.results[0];
