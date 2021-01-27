@@ -14,7 +14,7 @@ function linkify(inputText) {
 }
 
 $(document).ready(function() {
-    const categoryURL = `https://thingproxy.freeboard.io/fetch/https://openapi.etsy.com/v2/shops/FelixLovesFabric/sections/` + getURLParameter('q') + `?api_key=buepssvdyz0dclpg4nnn7caf`;
+    const categoryURL = `https://cors-anywhere.herokuapp.com/https://openapi.etsy.com/v2/shops/FelixLovesFabric/sections/` + getURLParameter('q') + `?api_key=buepssvdyz0dclpg4nnn7caf`;
     var categoryResults = $.get(categoryURL, function() {})
         .done(function() {
             $('#categoryTitle').text(categoryResults.responseJSON.results[0].title);
@@ -22,7 +22,7 @@ $(document).ready(function() {
         .fail(function() {
             console.log("Fetch Error");
         })
-    const listingsURL = `https://thingproxy.freeboard.io/fetch/https://openapi.etsy.com/v2/shops/FelixLovesFabric/sections/` + getURLParameter('q') + `/listings?api_key=buepssvdyz0dclpg4nnn7caf&includes=Images`;
+    const listingsURL = `https://cors-anywhere.herokuapp.com/https://openapi.etsy.com/v2/shops/FelixLovesFabric/sections/` + getURLParameter('q') + `/listings?api_key=buepssvdyz0dclpg4nnn7caf&includes=Images`;
     var listingsResults = $.get(listingsURL, function() {})
         .done(function() {
             var listings = listingsResults.responseJSON.results;
