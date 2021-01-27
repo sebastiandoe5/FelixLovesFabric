@@ -18,6 +18,7 @@ $(document).ready(function() {
     var categoryResults = $.get(categoryURL, function() {})
         .done(function() {
             $('#categoryTitle').text(categoryResults.responseJSON.results[0].title);
+            $(document).prop('title', categoryResults.responseJSON.results[0].title + ' | Felix Loves Fabric');
         })
         .fail(function() {
             console.log("Fetch Error");
